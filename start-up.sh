@@ -1,7 +1,7 @@
 #!/bin/bash
 
 . /root/.bashrc
-cd /privacybot/app/
+cd /app/
 flask run &
-cd /privacybot/app/PB_UI
+cd /app/PB_UI
 npm start

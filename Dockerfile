@@ -6,19 +6,19 @@ RUN apt update && \
 
 RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
 
-COPY . /privacybot
+COPY app /app
 
-RUN cd /privacybot/app && \
+RUN cd /app && \
     pip3 install -r requirements.txt
 
 RUN . /root/.bashrc && \
     nvm install --lts && \
     nvm use --lts && \
-    cd /privacybot/app/PB_UI && \
+    cd /app/PB_UI && \
     npm install
 
 RUN . /root/.bashrc && \
-    cd /privacybot/app/PB_UI && \
+    cd /app/PB_UI && \
     npm audit fix && \
     npm run build
 

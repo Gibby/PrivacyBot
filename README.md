@@ -19,17 +19,17 @@ PrivacyBot is a simple automated service to initiate CCPA deletion requests with
 5. (Optional) Use docker
 
 ## Usage - Running PrivacyBot with Docker
-* `docker run -it --rm -v 3000:3000 ghcr.io/gibby/privacybot:latest`
+* `docker run -it --rm -p 3000:3000 ghcr.io/gibby/privacybot:latest`
 
   or
 
-* `docker run -it --rm -v 3000:3000 gibby/privacybot:latest`
+* `docker run -it --rm -p 3000:3000 gibby/privacybot:latest`
 * Open browser to http://localhost:3000
 
 ## Usage - Building PrivacyBot with Docker
 1. Clone the repo
 2. `docker build . -t privacybot`
-3. `docker run -it --rm -v 3000:3000 privacybot`
+3. `docker run -it --rm -p 3000:3000 privacybot`
 4. Open browser to http://localhost:3000
 
 
